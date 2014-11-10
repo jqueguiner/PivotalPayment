@@ -87,5 +87,5 @@ and you can read the vendor based on the Card Number
 	//please feel free to add new credit card type but keep in mind the the order in the CardTypes.json is important and that last pattern found = output
 	//so be sure to have VISA, MASTERCARD before resellers (VISA DEBIT is part of VISA for instance which means that VISA should be before VISA DEBIT)
 
-	vendor = $pivotal_config->getCardType('1234567890123456');
+	$vendor = $pivotal_config->getCardType('1234567890123456');
 	
