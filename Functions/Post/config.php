@@ -84,4 +84,35 @@ class Pivotal_Config{
 
 		return $rcard;
 	}
+	
+	private function cleanCardNumber($cardNumber = ''){
+		$cardNumber = str_replace('-' , '', $cardNumber);
+		$cardNumber = str_replace(' ' , '', $cardNumber);
+
+		return $cardNumber;
+	}
+
+	public function getCardType($cardNumber){
+		$cardNumber = $this->cleanCardNumber($cardNumber);
+
+		$cardsPatterns = $this->Pivotal_Config->readConfigData('CardTypes');
+		
+		$rcardtype = '';
+
+		foreach($cardsPatterns as $cardPattern):
+			
+			$pattern = $cardPattern['Pattern'];
+			
+			if($pattern != 'unknown'):	
+				$pattern = '/'.$pattern.'/';
+				if(preg_match($pattern, $cardNumber)):
+					$rcardtype = $cardPattern['Vendor'];
+				endif;
+			endif;
+
+		endforeach;
+		
+		return strtoupper($rcardtype);
+		
+	}
 }
