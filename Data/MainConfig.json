@@ -1,0 +1,10 @@
+{
+  "test":
+  {
+    "url":"https://testpayments.globalone.me/merchant/xmlpayment"
+  },
+  "live":
+  {
+    "url":"https://testpayments.globalone.me/merchant/xmlpayment"
+  }
+}

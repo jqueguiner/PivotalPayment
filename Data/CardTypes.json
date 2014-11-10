@@ -1,0 +1,50 @@
+[
+  {
+    "Vendor":"Maestro",
+    "Pattern":"^(?:5[0678]\\d\\d|6304|6390|67\\d\\d)\\d{8,15}$"
+  },
+  {
+    "Vendor":"JCB",
+    "Pattern":"(^(352)[8-9](\\d{11}$|\\d{12}$))|(^(35)[3-8](\\d{12}$|\\d{13}$))"
+  },
+  {
+    "Vendor":"Diners",
+    "Pattern":"^([30|36|38]{2})([0-9]{12})$"
+  },
+  {
+    "Vendor":"American Express",
+    "Pattern":"(^3[47])((\\d{11}$)|(\\d{13}$))"
+  },
+  {
+    "Vendor":"Visa",
+    "Pattern":"(^4\\d{12}$)|(^4[0-8]\\d{14}$)|(^(49)[^013]\\d{13}$)|(^(49030)[0-1]\\d{10}$)|(^(49033)[0-4]\\d{10}$)|(^(49110)[^12]\\d{10}$)|(^(49117)[0-3]\\d{10}$)|(^(49118)[^0-2]\\d{10}$)|(^(493)[^6]\\d{12}$)"
+  },
+  {
+    "Vendor":"Visa Debit",
+    "Pattern":"unknown"
+  },
+  {
+    "Vendor":"Electron",
+    "Pattern":"unknown"
+  },
+  {
+    "Vendor":"MasterCard",
+    "Pattern":"^5[1-4]\\d{14}$"
+  },
+  {
+    "Vendor":"Debit MasterCard",
+    "Pattern":"^55\\d{14}$"
+  },
+  {
+    "Vendor":"UK Domestic Maestro",
+    "Pattern":"^56\\d{14}$"
+  },
+  {
+    "Vendor":"Laser",
+    "Pattern":"unknown"
+  },
+  {
+    "Vendor":"Solo",
+    "Pattern":"(^(6334)[5-9](\\d{11}$|\\d{13,14}$)) |(^(6767)(\\d{12}$|\\d{14,15}$))"
+  }
+]

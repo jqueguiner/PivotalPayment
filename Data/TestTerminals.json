@@ -1,0 +1,27 @@
+[
+  {
+    "Currency":"USD",
+    "TerminalID":33001,
+    "SharedSECRET":"SandboxSecret001"
+  },
+  {
+    "Currency":"CAD",
+    "TerminalID":33002,
+    "SharedSECRET":"SandboxSecret002"
+  },
+  {
+    "Currency":"EUR",
+    "TerminalID":33003,
+    "SharedSECRET":"SandboxSecret003"
+  },
+  {
+    "Currency":"GBP",
+    "TerminalID":33004,
+    "SharedSECRET":"SandboxSecret004"
+  },
+  {
+    "Currency":"MCP",
+    "TerminalID":36001,
+    "SharedSECRET":"SandboxSecret001"
+  }
+]
