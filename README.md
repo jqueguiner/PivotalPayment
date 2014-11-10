@@ -72,7 +72,20 @@ Test cards are included in the library:
   	$pivotal = new Pivotal('test',$paymentParams);
 
   	$response = $pivotal->sendPayment();
-	
+
+Output
+-----------
+	array(
+		'UNIQUEREF' => 'GW5CWTXWIW',
+		'RESPONSECODE' => 'A',
+		'RESPONSETEXT' => 'APPROVAL',
+		'APPROVALCODE' => '475318',
+		'DATETIME' => '2014-11-10T17:25:58',
+		'AVSRESPONSE' => 'X',
+		'CVVRESPONSE' => 'M',
+		'HASH' => 'b035f8f72f4be9df404d6268b55c02b0',
+		'STATUS' => true
+	)
 
 Extra
 -----------
