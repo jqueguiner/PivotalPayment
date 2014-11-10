@@ -36,7 +36,9 @@ Live Usage
 	//CVV 3 or 4 Digits depending on vendor
   	$paymentParams['CVV'] = $cardCVV;
 
-  	$pivotal = new Pivotal('test',$params);
+	//'live' for live environment
+	//'test' for test environment
+  	$pivotal = new Pivotal('live',$paymentParams);
 
   	$response = $pivotal->sendPayment();
 	
@@ -67,7 +69,7 @@ Test cards are included in the library:
 	$paymentParams['YEAR'] = '16';
   	$paymentParams['CVV'] = $card['CVV'];
 
-  	$pivotal = new Pivotal('test',$params);
+  	$pivotal = new Pivotal('test',$paymentParams);
 
   	$response = $pivotal->sendPayment();
 	
