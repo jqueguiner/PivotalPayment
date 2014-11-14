@@ -3,8 +3,6 @@ PivotalPayment
 PHP Library for Pivotal Payment
 http://www.pivotalpayments.com/ca/fr/
 
-
-
 Requirements
 -----------
 CURL (php_curl)
@@ -100,3 +98,16 @@ and you can read the vendor based on the Card Number
 
 	$vendor = $pivotal_config->getCardType('1234567890123456');
 	
+Credit Card Regex
+-----------
+Here are the credit card regex known so far, please feel free to contribute to make this lib even more accurate.
+* Maestro
+* JCB
+* Diners
+* American
+* Express
+* Visa
+* MasterCard
+* Debit MasterCard
+* UK Domestic Maestro
+* Solo
