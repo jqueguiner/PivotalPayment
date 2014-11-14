@@ -20,9 +20,7 @@ Live Usage
   	//$DIR see section installation below
   	require_once($DIR.DIRECTORY_SEPARATOR.'Pivotal.php');	
 	
-	$pivotal_config = new Pivotal_Config('test');
-	
-	$card = $pivotal_config->readVendorTestCard('visa');
+	$pivotal_config = new Pivotal_Config('live');
 
 	$paymentParams['ORDERID'] = $orderId;
 	$paymentParams['AMOUNT'] = $amount;
