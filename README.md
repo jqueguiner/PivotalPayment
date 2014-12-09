@@ -28,7 +28,7 @@ Live Usage
 	//year two digits (16 for 2016)
 	$paymentParams['YEAR'] = $cardYear;
 	//CVV 3 or 4 Digits depending on vendor
-  	$paymentParams['CVV'] = $cardCVV;
+  	$paymentParams['CVC'] = $cardCVC;
 
 	//'live' for live environment
 	//'test' for test environment
@@ -61,13 +61,13 @@ Test cards are included in the library:
 	$paymentParams['CARDHOLDERNAME'] = $card['CardHolderName'];
 	$paymentParams['MONTH'] = '09';
 	$paymentParams['YEAR'] = '16';
-  	$paymentParams['CVV'] = $card['CVV'];
+  	$paymentParams['CVC'] = $card['CVC'];
 
   	$pivotal = new Pivotal('test',$paymentParams);
 
   	$response = $pivotal->sendPayment();
-
-Output
+ 
+Payment validation Output
 -----------
 	array(
 		'UNIQUEREF' => 'GW5CWTXWIW',
@@ -80,6 +80,19 @@ Output
 		'HASH' => 'b035f8f72f4be9df404d6268b55c02b0',
 		'STATUS' => true
 	)
+
+Building Payment Form
+-----------
+Test cards are included in the library:
+
+  	//$DIR see section installation below
+  	require_once($DIR.DIRECTORY_SEPARATOR.'Pivotal.php');	
+  	
+	//$action = formAction see http://www.w3schools.com/tags/att_form_action.asp for more info
+	$action = 'PaymentProcessURL.php';
+	
+	$pivotal_form = new Pivotal_Form($action);
+  	echo $pivotal_form->buildForm();
 
 Extra
 -----------
