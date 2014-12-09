@@ -1,8 +1,6 @@
 <?php
-$ds=DIRECTORY_SEPARATOR;
-//load config as it sometimes needs to be loaded before the main class
-//for instance to read card vendor or test cards
-require_once(dirname(__FILE__).$ds.'Functions'.$ds.'Post'.$ds.'config.php');
+	$ds=DIRECTORY_SEPARATOR;
+		require_once(dirname(__FILE__).$ds.'Functions'.$ds.'Post'.$ds.'config.php');
 
 class Pivotal {
 
@@ -28,6 +26,8 @@ class Pivotal {
 
 		// config checkups
 		$this->loadLibs();
+		$this->loadHelpers();
+
 		// set mode
 		$this->_mode = $mode;
 		$this->_paymentParams = $params;
@@ -41,12 +41,21 @@ class Pivotal {
 		$ds = DIRECTORY_SEPARATOR;
 		require_once(dirname(__FILE__).$ds.'Functions'.$ds.'Settings'.$ds.'checkup.php');
 
+
 		require_once(dirname(__FILE__).$ds.'Functions'.$ds.'Post'.$ds.'curl.php');
 		require_once(dirname(__FILE__).$ds.'Functions'.$ds.'Post'.$ds.'format.php');
 		require_once(dirname(__FILE__).$ds.'Functions'.$ds.'Post'.$ds.'hash.php');
 		require_once(dirname(__FILE__).$ds.'Functions'.$ds.'Post'.$ds.'post.php');
 
+		require_once(dirname(__FILE__).$ds.'Functions'.$ds.'Settings'.$ds.'checkup.php');
+
 		require_once(dirname(__FILE__).$ds.'Functions'.$ds.'Utils'.$ds.'XML.php');
+
+	}
+
+	private function loadHelpers(){
+		$ds = DIRECTORY_SEPARATOR;
+		require_once(dirname(__FILE__).$ds.'Helper'.$ds.'form.php');
 
 	}
 
@@ -63,6 +72,7 @@ class Pivotal {
 
 		$this->_config = $this->Pivotal_Config->readMainConfig();
 		$this->_paymentURL = $this->_config['url'];
+		
 		
 	}
 
