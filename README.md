@@ -83,7 +83,9 @@ Payment validation Output
 
 Building Payment Form
 -----------
-Test cards are included in the library:
+Payment form helper is included in the library and is based on https://github.com/jessepollak/card plugin
+
+![card](http://i.imgur.com/qG3TenO.gif)
 
   	//$DIR see section installation below
   	require_once($DIR.DIRECTORY_SEPARATOR.'Pivotal.php');	
