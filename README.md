@@ -69,6 +69,7 @@ Test cards are included in the library:
  
 Payment validation Output
 -----------
+	//if success
 	array(
 		'UNIQUEREF' => 'GW5CWTXWIW',
 		'RESPONSECODE' => 'A',
@@ -79,6 +80,13 @@ Payment validation Output
 		'CVVRESPONSE' => 'M',
 		'HASH' => 'b035f8f72f4be9df404d6268b55c02b0',
 		'STATUS' => true
+	)
+	
+	or
+	//if error
+	array(
+		'ERRORSTRING' => 'The error description',
+		'STATUS' => false
 	)
 
 Building Payment Form
