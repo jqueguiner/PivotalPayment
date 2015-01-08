@@ -1,6 +1,6 @@
 <?php
 	$ds=DIRECTORY_SEPARATOR;
-		require_once(dirname(__FILE__).$ds.'Functions'.$ds.'Post'.$ds.'config.php');
+	require_once(dirname(__FILE__).$ds.'Functions'.$ds.'Post'.$ds.'config.php');
 
 class Pivotal {
 
@@ -63,7 +63,6 @@ class Pivotal {
 
 		$this->Pivotal_Post = new Pivotal_Post($this->_paymentURL, $this->_paymentParams,$this->Pivotal_Config);
 
-
 		return $this->Pivotal_Post->sendPayment();
 	}
 
@@ -72,8 +71,6 @@ class Pivotal {
 
 		$this->_config = $this->Pivotal_Config->readMainConfig();
 		$this->_paymentURL = $this->_config['url'];
-		
-		
 	}
 
 	public function buildHash(){

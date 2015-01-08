@@ -26,7 +26,6 @@ Class Pivotal_Post{
 
 		$format->setPaymentResponse($curl->curlXmlRequest($this->_paymentURL,$format->getXML()));
 		$normalizedPaymentReponse = $format->normalizePaymentReponse();
-
 		$normalizedPaymentReponse['STATUS'] = $hash->controlResponseHash($normalizedPaymentReponse);
 
 		return $normalizedPaymentReponse;

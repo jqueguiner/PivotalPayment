@@ -86,7 +86,7 @@
 		}
 		
 		public function form(){
-			$out = '<form action="'.$this->_formAction.'" method="POST">';
+			$out = '<form id="myPaymentForm" action="'.$this->_formAction.'" method="POST">';
 			$out .= $this->inputs();
 			$out .= $this->button();
 			$out .= '</form>';
@@ -115,6 +115,8 @@
 					cvcInput: 'input[name=\"CVV\"]',
 					nameInput: 'input[name=\"CARDHOLDERNAME\"]'
 				})";
+
+
 			$out .= '</script>';
 			return $out;
 		}

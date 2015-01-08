@@ -84,8 +84,11 @@ Class Pivotal_Hash{
 	}
 
 	public function controlResponseHash($responseHash){
-
-		$this->_normalizedPaymentReponse=$responseHash;
-		return ($this->buildResponseHash() == $responseHash['HASH']);
+		if(isset($responseHash['ERRORSTRING'])):
+			return false;
+		else:
+			$this->_normalizedPaymentReponse=$responseHash;
+			return ($this->buildResponseHash() == $responseHash['HASH']);
+		endif;
 	}
 }

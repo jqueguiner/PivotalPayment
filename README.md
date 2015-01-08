@@ -69,6 +69,7 @@ Test cards are included in the library:
  
 Payment validation Output
 -----------
+	//if success
 	array(
 		'UNIQUEREF' => 'GW5CWTXWIW',
 		'RESPONSECODE' => 'A',
@@ -80,6 +81,13 @@ Payment validation Output
 		'HASH' => 'b035f8f72f4be9df404d6268b55c02b0',
 		'STATUS' => true
 	)
+	
+	or
+	//if error
+	array(
+		'ERRORSTRING' => 'The error description',
+		'STATUS' => false
+	)
 
 Building Payment Form
 -----------
@@ -88,7 +96,7 @@ Payment form helper is included in the library and is based on https://github.co
 ![card](http://i.imgur.com/qG3TenO.gif)
 
   	//$DIR see section installation below
-  	require_once($DIR.DIRECTORY_SEPARATOR.'Pivotal.php');	
+  	require_once($DIR.DIRECTORY_SEPARATOR.'Helper'.DIRECTORY_SEPARATOR.'form.php');	
   	
 	//$action = formAction see http://www.w3schools.com/tags/att_form_action.asp for more info
 	$action = 'PaymentProcessURL.php';
