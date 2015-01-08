@@ -88,7 +88,7 @@ Payment form helper is included in the library and is based on https://github.co
 ![card](http://i.imgur.com/qG3TenO.gif)
 
   	//$DIR see section installation below
-  	require_once($DIR.DIRECTORY_SEPARATOR.'Pivotal.php');	
+  	require_once($DIR.DIRECTORY_SEPARATOR.'Helper'.DIRECTORY_SEPARATOR.'form.php');	
   	
 	//$action = formAction see http://www.w3schools.com/tags/att_form_action.asp for more info
 	$action = 'PaymentProcessURL.php';
