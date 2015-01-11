@@ -137,6 +137,10 @@ class Pivotal_Format{
 			endif;
 
 		endforeach;
+
+		debug($cardNumber);
+		debug($rcardtype);
+		die();
 		
 		return strtoupper($rcardtype);
 		
