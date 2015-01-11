@@ -1,74 +1,62 @@
 [
   {
-    "Vendor":"Maestro",
+    "Vendor":"MAESTRO",
     "CVV":123,
-    "CardNumber":"3000 0000 0000 0000 04",
+    "CardNumber":"3000 0000 0000 04",
     "CardHolderName":"John Doe Maestro"
   },
   {
-    "Vendor":"JCB",
-    "CVV":123,
-    "CardNumber":"3569 9900 0000 0009",
-    "CardHolderName":"John Doe JCB"
-  },
-  {
-    "Vendor":"Diners",
-    "CVV":123,
-    "CardNumber":"3600 0000 0000 08",
-    "CardHolderName":"John Doe Diners"
-  },
-  {
-    "Vendor":"American Express",
+    "Vendor":"AMEX", 
     "CVV":1234,
-    "CardNumber":"3742 0000 0000 004",
+    "CardNumber":"3742 000000 00004",
     "CardHolderName":"John Doe Amex"
   },
   {
-    "Vendor":"Visa",
-    "CVV":123,
-    "CardNumber":"4444 3333 2222 1111",
-    "CardHolderName":"John Doe Visa"
-  },
-  {
-    "Vendor":"Visa Debit",
+    "Vendor":"VISA DEBIT",
     "CVV":123,
     "CardNumber":"4462 0000 0000 0003",
     "CardHolderName":"John Doe Visa Debit"
   },
   {
-    "Vendor":"Electron",
+    "Vendor":"VISA",
+    "CVV":123,
+    "CardNumber":"4444 3333 2222 1111",
+    "CardHolderName":"John Doe Visa"
+  },
+  {
+    "Vendor":"ELECTRON",
     "CVV":123,
     "CardNumber":"4917 3000 0000 0008",
     "CardHolderName":"John Doe Electron"
   },
   {
-    "Vendor":"MasterCard",
+    "Vendor":"MASTERCARD",
     "CVV":123,
     "CardNumber":"5404 0000 0000 0001",
     "CardHolderName":"John Doe MasterCard"
   },
   {
-    "Vendor":"Debit MasterCard",
+    "Vendor":"DEBIT MASTERCARD",
     "CVV":123,
     "CardNumber":"5573 4700 8901 0012",
     "CardHolderName":"John Doe MasterCard Debit"
   },
   {
-    "Vendor":"UK Domestic Maestro",
-    "CVV":123,
-    "CardNumber":"5641 8200 0000 0005",
-    "CardHolderName":"John Doe UK Domestic Maestro"
-  },
-  {
-    "Vendor":"Laser",
+    "Vendor":"LASER",
     "CVV":123,
     "CardNumber":"6304 9900 0000 0000 044",
     "CardHolderName":"John Doe Laser"
+  }
+  {
+    "Vendor":"JCB",
+    "CVV":123,
+    "CardNumber":"1569 9900 0000 0009",
+    "CardHolderName":"John Doe JCB"
   },
   {
-    "Vendor":"Solo",
+    "Vendor":"DINERS",
     "CVV":123,
-    "CardNumber":"6767 6222 2222 2222 222",
-    "CardHolderName":"John Doe Solo"
-  }
+    "CardNumber":"3600 0000 0000 08",
+    "CardHolderName":"John Doe Diners"
+  },
 ]

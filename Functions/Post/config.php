@@ -95,9 +95,9 @@ class Pivotal_Config{
 	public function getCardType($cardNumber){
 		$cardNumber = $this->cleanCardNumber($cardNumber);
 
-		$cardsPatterns = $this->Pivotal_Config->readConfigData('CardTypes');
+		$cardsPatterns = $this->readConfigData('CardTypes');
 		
-		$rcardtype = '';
+		$rcardtype = 'UNKNOWN';
 
 		foreach($cardsPatterns as $cardPattern):
 			
@@ -111,8 +111,7 @@ class Pivotal_Config{
 			endif;
 
 		endforeach;
-		
-		return strtoupper($rcardtype);
-		
+
+		return strtoupper($rcardtype);		
 	}
 }

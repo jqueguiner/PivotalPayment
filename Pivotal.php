@@ -62,8 +62,18 @@ class Pivotal {
 	public function sendPayment(){
 
 		$this->Pivotal_Post = new Pivotal_Post($this->_paymentURL, $this->_paymentParams,$this->Pivotal_Config);
+		$out = $this->Pivotal_Post->sendPayment();
 
-		return $this->Pivotal_Post->sendPayment();
+		if($out['STATUS'] == false && !strpos($out['ERRORSTRING'],'#')===false):
+			$error = $out['ERRORSTRING'];
+
+			if(!strpos($error,'#AnonType_CARDNUMBER')===false):
+				$out['ERRORSTRING'] = 'wrong card number (must be at least 10 digits)';
+			endif;
+		
+		endif;
+
+		return $out;
 	}
 
 	public function setEnvironment(){
