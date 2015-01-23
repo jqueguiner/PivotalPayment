@@ -12,6 +12,8 @@ Multibyte String PHP extension (php_mbstring)
 Installation
 -----------
   Place the content of the github repo into the desired directory in your projet ($DIR)
+  Create a transaction table if needed in your DB (SQL model file in located under:
+  - Data/dataModel.sql
 
 Live Usage
 -----------
@@ -34,8 +36,12 @@ Live Usage
 	//'test' for test environment
   	$pivotal = new Pivotal('live',$paymentParams);
 
+	//transactions won't be saved in the DB
   	$response = $pivotal->sendPayment();
-	
+  	
+  	//transactions will be saved in the DB
+  	//true option stands for transaction recording in the database (table is "transaction" see installation section")
+	$response = $pivotal->sendPayment(true);
 
 Test Usage
 -----------
