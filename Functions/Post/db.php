@@ -100,7 +100,7 @@ Class Pivotal_Db{
 		$sqlSuffix = ";";
 		$fieldsToSave = '';
 		$dataToSave = '';
-		debug($txnArrayToSave);
+
 		foreach($txnArrayToSave as $fielToMap => $valueToSave):
 			if(isset($fieldMapping[$fielToMap])):
 				$fieldsToSave .= ', '.$fieldMapping[$fielToMap];
