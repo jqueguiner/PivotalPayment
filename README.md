@@ -35,6 +35,9 @@ Live Usage
 	//'live' for live environment
 	//'test' for test environment
   	$pivotal = new Pivotal('live',$paymentParams);
+  	
+  	//configure your db to autosave transactions
+	$pivotal->_dbConfig = array('server' => 'localhost', 'login' => 'root', 'password' => 'root', 'database' => 'myDb');
 
 	//transactions won't be saved in the DB
   	$response = $pivotal->sendPayment();
