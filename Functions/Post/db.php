@@ -2,7 +2,7 @@
 Class Pivotal_Db{
 
 	var $_dbConfig = array(
-		'server' => 'localhost',
+		'host' => 'localhost',
 		'login' => 'root',
 		'password' => 'root',
 		'database' => 'mydb'
@@ -78,7 +78,7 @@ Class Pivotal_Db{
 	}
 
 	private function openConnection(){
-		$db = mysql_connect($this->_dbConfig['server'], $this->_dbConfig['login'], $this->_dbConfig['password']);		
+		$db = mysql_connect($this->_dbConfig['host'], $this->_dbConfig['login'], $this->_dbConfig['password']);		
 		mysql_select_db($this->_dbConfig['database'],$db);
 	}
 	
