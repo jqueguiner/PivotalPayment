@@ -5,7 +5,7 @@ Class Pivotal_Db{
 		'server' => 'localhost',
 		'login' => 'root',
 		'password' => 'root',
-		'database' => 'myDB'
+		'database' => 'mydb'
 		);
 
 	var $_txnConfig = array(
@@ -36,8 +36,8 @@ Class Pivotal_Db{
 			'TXNID' => 'txn_id',
 			'AMOUNT' => 'amountPaid',
 			'CURRENCY' => 'currencyPaid',
-			'DATETIME' => 'paiementDate',
-			'STATUS' => 'paiementStatus'
+			'DATETIME' => 'paymentDate',
+			'STATUS' => 'paymentStatus'
 			)
 		);
 
@@ -101,9 +101,12 @@ Class Pivotal_Db{
 		$fieldsToSave = '';
 		$dataToSave = '';
 
-		foreach($txnArrayToSave as $fielToMap => $valueToSave):
-			if(isset($fieldMapping[$fielToMap])):
-				$fieldsToSave .= ', '.$fieldMapping[$fielToMap];
+		foreach($txnArrayToSave as $fieldToMap => $valueToSave):
+			if(isset($fieldMapping[$fieldToMap])):
+				if($fieldToMap == 'CVVRESPONSE' && is_array($valueToSave)):
+					$valueToSave = '';
+				endif;
+				$fieldsToSave .= ', '.$fieldMapping[$fieldToMap];
 				$dataToSave .= ", '".$valueToSave."'";
 			endif;
 		endforeach;
@@ -142,8 +145,10 @@ Class Pivotal_Db{
 		endforeach;
 		
 		$sql = $sqlPrefix.$sqlUpdate.$sqlSuffix;
-		
-		$this->executeQuery($sql);
+
+		if(!$txnArrayToSave['STATUS']):
+			$this->executeQuery($sql);
+		endif;
 			
 		$this->closeConnection();
 	}
