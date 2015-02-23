@@ -35,7 +35,7 @@ Class Pivotal_Db{
 			'ORDERID' => 'id',
 			'TXNID' => 'txn_id',
 			'AMOUNT' => 'amountPaid',
-			'CURRENCY' => 'currencyPaid',
+			'CURRENCY' => 'currency',
 			'DATETIME' => 'paymentDate',
 			'STATUS' => 'paymentStatus'
 			)

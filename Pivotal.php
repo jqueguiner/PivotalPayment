@@ -54,9 +54,9 @@ class Pivotal {
 			'ORDERID' => 'id',
 			'TXNID' => 'txn_id',
 			'AMOUNT' => 'amountPaid',
-			'CURRENCY' => 'currencyPaid',
-			'DATETIME' => 'paiementDate',
-			'STATUS' => 'paiementStatus'
+			'CURRENCY' => 'currency',
+			'DATETIME' => 'paymentDate',
+			'STATUS' => 'paymentStatus'
 			)
 		);
 	
